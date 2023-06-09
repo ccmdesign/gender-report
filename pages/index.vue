@@ -3,7 +3,7 @@
     <div class="gr-hero">
       <img src="/images/hero.jpg" alt="Hero" class="gr-hero__image" aria-hidden="true" />
       <div class="gr-hero__content">
-        <stack-l space="var(--s1)">
+        <stack-l space="var(--s1)" class="gr-hero__info">
           <h1 class="gr-hero__title">Supporting Gender Equality Outcomes in Development Research</h1>
           <p class="gr-hero__tagline">Reflections on a Multi-year Collaboration between Gender at Work, IDRC and its Partners</p>
           <p class="gr-hero__date">May 2023</p>
@@ -17,7 +17,7 @@
         </ul>
       </div>
     </div>
-    <center-l size="wide">
+    <center-l size="wide" class="gr-logos-container">
       <div class="gr-logos">
         <a href="https://idrc-crdi.ca/" target="_blank" class="gr-logo">
           <img src="/images/idrc-logo.png" alt="IDRC CRDI" />
@@ -44,6 +44,11 @@
         <p>Change requires some sort of ‘upset’, often called disconfirmation.</p>
       </div>
     </center-l>
+    <div class="footer">  
+      <center-l class="copy">
+        <p>Designed by <a href="https://www.ccmdesign.ca/" target="_blank">CCM Design</a> - 2023</p>
+      </center-l>
+    </div>
   </article>
 </template>
 
@@ -56,10 +61,28 @@
     flex-direction: row;
     background-color: var(--base-color);
     color: var(--white-color);
+    @media (max-width: 52em) {
+      flex-direction: column;
+    }
+    @media (min-width: 74em) {
+      justify-content: flex-end;
+      height: 640px;
+    }
   }
 
     .gr-hero__image {
       height: 75vh;
+      @media (max-width: 52em) {
+        height: auto;
+        width: 100%;
+      }
+      @media (min-width: 74em) {
+        width: 640px;
+        height: 640px;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
     }
 
     .gr-hero__content {
@@ -68,21 +91,42 @@
       flex-flow: column nowrap;
       align-items: flex-start;
       justify-content: space-between;
+      @media (max-width: 36em) {
+        padding: var(--s2) var(--s1);
+      }
+      @media (min-width: 74em) {
+        width: calc(100% - 640px);
+      }
+    }
+
+    .gr-hero__info {
+      @media (max-width: 36em) {
+        margin-bottom: var(--s2);
+      }
     }
 
     h1.gr-hero__title {
       color: var(--white-color);
       font-size: 1.5em;
+      @media (max-width: 36em) {
+        font-size: 1.125em;
+      }
     }
 
     .gr-hero__tagline {
       font-size: 1.125em;
+      @media (max-width: 36em) {
+        font-size: 0.875em;
+      }
     }
 
     .gr-hero__date {
       font-weight: 700;
       text-transform: uppercase;
       font-size: 0.75em;
+      @media (max-width: 36em) {
+        display: none;
+      }
     }
 
     .gr-hero__button {
@@ -90,11 +134,27 @@
       border-width: 2px;
       font-family: var(--display-font);
     }
+  
+    .gr-hero__editors {
+      @media (max-width: 36em) {
+        display: none;
+      }
+    }
 
     .gr-hero__editors-title {
       font-weight: 700;
     }
 
+  .gr-logos-container {
+    @media (min-width: 74em) {
+      width: 640px;
+      position: fixed;
+      top: 640px;
+      left: 0;
+      background-color: var(--white-color);
+      box-sizing: border-box;
+    }
+  }
 
   .gr-logos {
     display: flex;
@@ -113,9 +173,26 @@
   .gr-content {
     padding-block: var(--s2);
     border-top: 1px solid var(--base-color-20);
+    @media (min-width: 74em) {
+      padding-left: calc(640px + var(--s1));
+    }
     p {
       margin-bottom: var(--s0);
       font-size: 1em;
     }
   }
+
+  .footer {
+    background-color: var(--base-color);
+    color: var(--white-color);
+  }
+
+    .copy {
+      text-align: center;
+      padding-block: var(--s0);
+      a {
+        color: var(--white-color);
+        font-weight: 700;
+      }
+    }
 </style>
