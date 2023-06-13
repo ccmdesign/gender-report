@@ -108,6 +108,7 @@
     h1.gr-hero__title {
       color: var(--white-color);
       font-size: 1.5em;
+      font-weight: 700;
       @media (max-width: 36em) {
         font-size: 1.125em;
       }
@@ -167,6 +168,7 @@
 
   h2.gr-title {
     font-size: 1.5em;
+    font-weight: 700;
     margin-bottom: var(--s1);
   }
 

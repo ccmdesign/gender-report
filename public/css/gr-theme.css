@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
-@import url();
+@import url('https://cloud.typography.com/7264818/7773832/css/fonts.css');
 
 
 :root, :after, :before {
@@ -7,7 +7,7 @@
     --base-border-width: 1px;
     --base-border-radius: 6px;
   
-    --display-font: 'Sentinel', sans-serif;
+    --display-font: 'Sentinel A', 'Sentinel B', sans-serif;
     --body-font: 'Barlow', sans-serif;
     --line-height: var(--ratio);
     --font-weight: 200;

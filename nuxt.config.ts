@@ -38,7 +38,6 @@ export default defineNuxtConfig({
           href:
             "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined",
         },
-        { rel: "stylesheet", href: "https://cloud.typography.com/7264818/7773832/css/fonts.css" },
       ],
     }
   },
