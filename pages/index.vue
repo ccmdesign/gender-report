@@ -8,7 +8,7 @@
           <p class="gr-hero__tagline">Reflections on a Multi-year Collaboration between Gender at Work, IDRC and its Partners</p>
           <p class="gr-hero__date">May 2023</p>
         </stack-l>
-        <base-button class="gr-hero__button" color="white">Download Publication</base-button>
+        <a class="gr-hero__button | button" target="_blank" href="/gender-equality-in-development-research.pdf" color="white">Download Publication</a>
         <ul class="gr-hero__editors">
           <li class="gr-hero__editors-title">Edited by:</li>
           <li>David Kelleher</li>
